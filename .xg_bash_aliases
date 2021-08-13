@@ -2,3 +2,4 @@
 alias rm='rm -i' 
 alias li='ls -li --color=auto'
 
+. /home/xgz/mysh/git_aliases.sh
