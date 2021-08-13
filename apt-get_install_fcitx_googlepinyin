@@ -1,0 +1,4 @@
+#!/bin/bash
+# first update the soft sources && then install
+sudo apt-get update && apt-get install fcitx && apt-get install fcitx-googlepinyin 
+
