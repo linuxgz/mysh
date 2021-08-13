@@ -34,6 +34,34 @@ do
 	esac
 done
 
+echo "#-------------------------------------"
+###############################
+
+# change update source for linux
+echo "Update a fast source for your linux"
+echo "Is samiler to what ?"
+LX1=kali
+LX2=centos
+select LXN in "$LX1" "$LX2"
+do
+	case $LXN in
+		"$LX1")
+			echo "after backup the /etc/apt/sources.list, replaced."
+			. $MYSHPATH/change_sources_list_for_kali.sh
+			break
+			;;
+		"$LX2")
+			echo "the sh is on the way,"
+			break
+			;;
+		*)
+			echo "all is going well"
+	esac
+done
+
+#-----------------------------------------------
+echo "------------------------------------------------"
+
 
 
 
