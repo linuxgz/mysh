@@ -47,13 +47,13 @@ do
 	case $choices in
 		"$A")
 			echo "wget -r -p -np -k will down a whole site."
-			break
 			wget -r -p -np -k "$DURL"
+			break
 			;;
 		"$B")
 			echo "Begin to clone the websit,it will take long time."
-			break
 			wget -m -e robots=off -k -E "$DURL"
+			break
 			;;
 		*)
 			echo "try again"
