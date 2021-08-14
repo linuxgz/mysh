@@ -47,7 +47,7 @@ SMTPSERVER=$MYSERVER
 if [ $# -eq 1 ]
 then
 	DATE=$1
-	swaks --date $DATE --to $MYSTM --from $FRM --server $SMTPSERVER -p 25 -au $STM -ap $STP
+	swaks --data $DATE --to $MYSTM --from $FRM --server $SMTPSERVER -p 25 -au $STM -ap $STP
 elif [ $# -eq 2 ]
 then
 	DATE=$1
