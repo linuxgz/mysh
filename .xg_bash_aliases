@@ -1,5 +1,6 @@
 #! /bin/bash
 alias rm='rm -i' 
 alias li='ls -li --color=auto'
+MYSHPATH=$HOME/mysh
 
-. /home/xgz/mysh/git_aliases.sh
+. $MYSHPATH/git_aliases.sh
