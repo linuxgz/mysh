@@ -7,3 +7,4 @@ git add * \
 git commit -a -m "save them" \
 && \
 git push git@github.com:linuxgz/mysh master
+
