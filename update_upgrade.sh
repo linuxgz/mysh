@@ -1,6 +1,12 @@
 #!/bin/bash
 echo " it may take long time to finish."
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade || sudo  apt --fix-broken install && echo "well done"
+sudo apt update \
+&& \
+sudo apt upgrade -y \
+&& sudo apt full-upgrade -y \
+|| sudo  apt --fix-broken install -y \
+&& echo "well done"
+
 # sudo apt-get update && sudo apt-get upgrade -y
 
 # apt-get upgrade #更新已经安装的软件
