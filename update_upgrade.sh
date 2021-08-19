@@ -5,7 +5,10 @@ sudo apt update \
 sudo apt upgrade -y \
 && sudo apt full-upgrade -y \
 || sudo  apt --fix-broken install -y \
-&& echo "well done"
+&& \
+sudo apt autoremove \
+&& \
+echo "well done"
 
 # sudo apt-get update && sudo apt-get upgrade -y
 
