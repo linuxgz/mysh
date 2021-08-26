@@ -1,0 +1,27 @@
+#!/bin/bash
+
+        cmdpath=`which $1`
+        echo -e "$1 is locate:\n ${cmdpath}"
+        echo "--------------------------------------"
+        echo -e "$1 is from :\n"
+        echo "$(rpm -qf ${cmdpath})"
+        echo "---------------------------------------"
+        echo -e "other files from this pkgs:\n"
+        cmdpkg=$(rpm -qf ${cmdpath})
+        echo "$(rpm -ql $cmdpkg )"
+        echo "-----------------------------------------"
+        echo -e "the config files path: \n"
+        echo "$(rpm -qlc $cmdpkg )"
+#       echo "--------------------------------------"
+#       echo "R pakgs"
+#       echo "$(rpm -qR $cmdpkg)"
+        echo "--------------------------------------"
+        echo "$(rpm -qa | grep $1 )"
+        echo "___________________"
+        echo "++++++++++++++++++++++++++++++++++"
+        for var in $(rpm -qa | grep $1 | xargs)
+        do
+        echo "$var^^^^^^^^^^^^^^^"
+        echo "$(rpm -qlc ${var})"
+        echo "+++++++++++++++++++++++++++++++"
+        done
