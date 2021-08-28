@@ -1,0 +1,8 @@
+
+#定义函数 设定终端长命编辑器
+funtion vimeditor(){
+echo "export EDITOR=vim">>$HOME/.bashrc
+source $HOME/.bashrc
+echo " try Ctrl+e Ctrl+x to edit a long command in vim, thank you."
+}
+
