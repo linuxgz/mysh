@@ -1,0 +1,22 @@
+#!/bin/bash
+Test_CMD_Name=$1
+DivLine="----------------------------------------------"
+llcmd(){
+if ! type $Test_CMD_Name &> /dev/null; then
+	echo "Not in PATH"
+else 
+	echo "type : `type $Test_CMD_Name`"
+	echo "whatis : `whatis $Test_CMD_Name`"
+	echo "which :`which $Test_CMD_Name`"
+	echo "whereis : `whereis $Test_CMD_Name`"
+	Cmd_Path=`which $Test_CMD_Name`
+	echo "file : `file $Cmd_Path`" 
+	echo "stat : `stat $Cmd_Path`" 
+	#echo "ls -l : `ls -l $Cmd_Path`" 
+	echo "getfacl : `getfacl $Cmd_Path`"
+	echo "getsebool : "
+	echo ""
+	echo "ls -Z : `ls -Z $Cmd_Path`"
+fi
+}
+llcmd

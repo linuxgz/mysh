@@ -1,0 +1,18 @@
+#!/bin/bash
+
+bak(){
+source_file=${var1}
+datestyle=+%Y-%m-%d-%H-%M-%S
+cp ${source_file} ${source_file}_bak_$(date ${datestyle})_by_xgz
+}
+
+
+hostname_file=/etc/hostname
+new_hostname=$1
+var1=${hostname_file}
+
+bak
+echo "${new_hostname}" > ${hostname_file}
+hostname ${new_hostname}
+echo "the new hostname will be show on next login"
+

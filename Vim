@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+File=$1
+Div_Line="##################################################################"
+Exp_Shabang="
+#!/bin/bash\n\
+# LANG=$LANG\n\
+# ${Div_Line}\n\
+# `date`\n\
+# Written by:`whoami`\n\
+# FileName:$File \n\
+# Usage:\n\
+# Contact me by linuxgz@163.com\n\
+# ${Div_Line}
+"
+# Add bak fuction
+# 定义备份文件夹后缀 一般 年-月-日-时-分-秒
+datestyle=+%Y-%m-%d-%H-%M-%S
+Bak_Time=`date ${datestyle}`
+#
+if [ $# -lt 1 ]; then
+        Date=`date +%s`;
+        File=new${Date}.txt;
+        echo -e $Exp_Shabang > $File
+        echo -e "# $File is radom, if need change :w ./newname.file \n# ${Div_Line}" >>$File
+        vim + $File
+else
+        if [ -e $File ]; then
+                Dirname=`dirname $File`
+                Basename=`basename $File`
+                mkdir $Dirname/.$Basename 2>/dev/null
+                cp -P $File $Dirname/.$Basename/${Basename}_${Bak_Time}
+                vim $File
+        else
+                echo -e $Exp_Shabang > $File && vim + $File
+        fi
+fi

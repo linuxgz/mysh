@@ -1,6 +1,0 @@
-#!/bin/bash
-touch ./$@
-echo "#!/bin/bash">>./$@
-echo "set -euo pipefail">>./$@
-echo "trap "echo 'error: Script failed: see failed command above'" ERR">>./$@
-vi ./$@

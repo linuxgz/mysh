@@ -1,0 +1,24 @@
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 09月 22日 星期三 09:48:19 CST
+# Written by:xgz
+# FileName: 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+# new1632275300.txt is radom, if need change :w ./newname.file 
+# ##################################################################
+Div_Line="##################this is dived line ####################"
+echo $Div_Line
+df -h
+echo $Div_Line
+df -i
+
+echo $Div_Line
+
+#---------------
+#WARNING=80
+#SPACE_USED=`df | grep '^/dev/sd'|grep -oE '[0-9]+%'|tr -d %| sort -nr|head -1`
+#INODE_USED=`df -i | grep '^/dev/sd'|grep -oE '[0-9]+%'|tr -d %| sort -nr|head -1`
+

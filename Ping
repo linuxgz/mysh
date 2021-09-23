@@ -1,0 +1,14 @@
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 09月 22日 星期三 09:50:39 CST
+# Written by:xgz
+# FileName:Ping 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+Ip_Addr=$1
+
+ping -c4 -W2 $Ip_Addr &> /dev/null && echo "$Ip_Addr is up " || { echo "$Ip_Addr  is unreachable"; exit; }
+
+echo "Script is finished"
