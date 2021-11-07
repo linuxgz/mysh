@@ -1,0 +1,11 @@
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 09月 30日 星期四 09:53:18 CST
+# Written by:xgz
+# FileName:Locate 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+
+sudo updatedb && locate $@

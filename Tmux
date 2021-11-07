@@ -1,0 +1,18 @@
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 09月 26日 星期日 23:16:36 CST
+# Written by:xgz
+# FileName:./mysh/Tmux 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+N=$1
+if [[ $#<1 ]]; then
+        N=1
+fi
+
+if tmux ls &>/dev/null ; then
+        Sesion=$(tmux ls | head -$N | tail -1 | cut -d: -f1)
+        tmux a -t $Sesion
+fi

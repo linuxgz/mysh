@@ -1,0 +1,14 @@
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 09月 25日 星期六 09:23:28 CST
+# Written by:xgz
+# FileName:Scp 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+#scp 快捷命令到我的centos8
+localfile=$@
+Destination="root@426d24910q.zicp.vip:/root/scp/"
+scp -rv -P 17571 -i /home/xgz/.ssh/id_rsa $localfile $Destination
+echo "$?"

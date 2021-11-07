@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+#!/bin/bash
+# LANG=zh_CN.UTF-8
+# ##################################################################
+# 2021年 10月 08日 星期五 10:51:19 CS# Written by:xgz
+# FileName:Sudo 
+# Usage:
+# Contact me by linuxgz@163.com
+# ##################################################################
+set timeout 30
+spawn sudo -E su
+expect "密码"
+send "~1qaz!2wsx\r"
+expect "root@"
+send "source ~/mysh/update_upgrade.sh\r"
+interact
